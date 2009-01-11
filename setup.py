@@ -45,7 +45,7 @@ setup(
         Extension("pyfastbit._pyfastbit", ["pyfastbit/_pyfastbit.c"],
             include_dirs=[os.path.join(FASTBIT_PREFIX, 'include')],
             library_dirs=[os.path.join(FASTBIT_PREFIX, 'lib')],
-            libraries=['fastbit'],
+            libraries=['fastbit', 'stdc++'],
         ),
     ],
 )

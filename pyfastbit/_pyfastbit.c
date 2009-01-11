@@ -228,6 +228,8 @@ void
 init_pyfastbit(void)
 {
     PyObject *m;
+    PyFastBitQueryType.tp_new = PyType_GenericNew;
+    PyFastBitResultSetType.tp_new = PyType_GenericNew;
     if (PyType_Ready(&PyFastBitQueryType) < 0)
         return;
     if (PyType_Ready(&PyFastBitResultSetType) < 0)
